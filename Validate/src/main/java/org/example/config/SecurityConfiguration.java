@@ -49,7 +49,7 @@ public class SecurityConfiguration {
             "/api-docs/**",
             "/login/oauth2/code/google",
             "/login/oauth2/code/facebook",
-            "test"
+            "test", "test1"
     };
     private static final String[] USER_URLS = {"/auth/user/**"};
     private static final String[] ADMIN_URLS = {"/auth/admin/**"};
@@ -64,7 +64,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(WHITELIST_URLS).permitAll()
                         .requestMatchers(AUTHLIST_URLS).authenticated()//ROLE_USER
-                        .requestMatchers(USER_URLS).hasAuthority("ROLE_USER")
+//                        .requestMatchers(USER_URLS).hasAuthority("ROLE_USER")
                         .requestMatchers(ADMIN_URLS).hasAuthority("ROLE_ADMIN")
                         .anyRequest().permitAll()
                 )

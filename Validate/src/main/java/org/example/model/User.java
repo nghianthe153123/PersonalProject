@@ -19,7 +19,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
 //    @NotBlank(message = "Name not blank")
     private String name;
 
@@ -32,5 +31,6 @@ public class User {
     private String roles;
 
     private String loginSource;
+
     private String idProvider;
 }

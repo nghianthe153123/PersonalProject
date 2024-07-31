@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 @Service
 public class RedisPlanService {
-    private ValueOperations<String, Integer> valueOps;
-    private RedisTemplate<String, Integer> redisTemplate;
+    private final ValueOperations<String, Integer> valueOps;
+    private final RedisTemplate<String, Integer> redisTemplate;
 
     public RedisPlanService(RedisTemplate<String, Integer> redisTemplate){
         this.redisTemplate = redisTemplate;
